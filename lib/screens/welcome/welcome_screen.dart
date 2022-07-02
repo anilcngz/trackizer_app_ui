@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:trackizer_app/config/colors.dart';
 import 'package:trackizer_app/screens/get_started/get_started_screen.dart';
+import 'package:trackizer_app/screens/login/login_screen.dart';
 import 'package:trackizer_app/widgets/custom_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -93,7 +94,12 @@ class WelcomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: CustomButton(
-                onTap: () {},
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const LoginScreen(),
+                  ),
+                ),
                 mainColor: Colors.white.withOpacity(0.10),
                 child: Text(
                   'I have an account',

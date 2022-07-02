@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trackizer_app/config/colors.dart';
+import 'package:trackizer_app/screens/home/home_screen.dart';
 import 'package:trackizer_app/screens/register/register_screen.dart';
 import 'package:trackizer_app/widgets/custom_button.dart';
 import 'package:trackizer_app/widgets/custom_text_field.dart';
@@ -92,7 +93,13 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               const SizedBox(height: 24.0),
               CustomButton(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HomeScreen()),
+                    (route) => false,
+                  );
+                },
                 mainColor: kAccentP100,
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,

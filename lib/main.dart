@@ -42,5 +42,10 @@ ThemeData _buildAppTheme() {
         borderRadius: BorderRadius.circular(4.0),
       ),
     ),
+    appBarTheme: const AppBarTheme(
+      centerTitle: true,
+      color: Colors.transparent,
+      elevation: 0.0,
+    ),
   );
 }
