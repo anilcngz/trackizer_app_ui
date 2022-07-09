@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trackizer_app/config/colors.dart';
-import 'package:trackizer_app/screens/home/home_screen.dart';
+import 'package:trackizer_app/screens/nav/nav.dart';
 import 'package:trackizer_app/screens/register/register_screen.dart';
 import 'package:trackizer_app/widgets/custom_button.dart';
 import 'package:trackizer_app/widgets/custom_text_field.dart';
@@ -96,7 +96,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 onTap: () {
                   Navigator.pushAndRemoveUntil(
                     context,
-                    MaterialPageRoute(builder: (context) => const HomeScreen()),
+                    MaterialPageRoute(builder: (context) => const Nav()),
                     (route) => false,
                   );
                 },

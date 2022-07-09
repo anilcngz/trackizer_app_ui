@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
-import 'package:path_drawing/path_drawing.dart';
 import 'package:trackizer_app/config/colors.dart';
 import 'package:trackizer_app/screens/home/widgets/sub_item.dart';
+import 'package:trackizer_app/screens/home/widgets/subscription_item.dart';
+import 'package:trackizer_app/screens/home/widgets/subscription_item_date.dart';
 import 'dart:math' as math;
 
 import 'package:trackizer_app/widgets/custom_button.dart';
@@ -118,6 +119,134 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 24.0),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(height: 21.0),
+          Expanded(
+            child: DefaultTabController(
+              length: 2,
+              child: Column(
+                children: [
+                  Container(
+                    height: 50.0,
+                    width: double.infinity,
+                    margin: const EdgeInsets.symmetric(horizontal: 24.0),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 9.0,
+                      vertical: 7.0,
+                    ),
+                    decoration: BoxDecoration(
+                      color: kGrey100,
+                      borderRadius: BorderRadius.circular(16.0),
+                    ),
+                    child: TabBar(
+                      padding: EdgeInsets.zero,
+                      indicatorPadding: EdgeInsets.zero,
+                      labelPadding: EdgeInsets.zero,
+                      indicator: BoxDecoration(
+                        color: kGrey60.withOpacity(0.20),
+                        borderRadius: BorderRadius.circular(16.0),
+                      ),
+                      tabs: [
+                        Container(
+                          height: 36.0,
+                          alignment: Alignment.center,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 23.0,
+                            vertical: 10.0,
+                          ),
+                          child: Text(
+                            'Your subscriptions',
+                            style: Theme.of(context).textTheme.labelMedium,
+                          ),
+                        ),
+                        Container(
+                          height: 36.0,
+                          alignment: Alignment.center,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 23.0,
+                            vertical: 10.0,
+                          ),
+                          child: Text(
+                            'Upcoming bills',
+                            style: Theme.of(context).textTheme.labelMedium,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 16.0),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                      child: TabBarView(
+                        children: [
+                          ListView(
+                            shrinkWrap: true,
+                            padding: EdgeInsets.zero,
+                            children: [
+                              SubscriptionItem(
+                                trailingWidget: SvgPicture.asset(
+                                  'assets/icons/spotify_logo.svg',
+                                  width: 40.0,
+                                ),
+                                title: 'Spotify',
+                                price: 5.99,
+                              ),
+                              SubscriptionItem(
+                                trailingWidget: SvgPicture.asset(
+                                  'assets/icons/yt_premium_logo.svg',
+                                  width: 40.0,
+                                ),
+                                title: 'YouTube Premium',
+                                price: 18.99,
+                              ),
+                              SubscriptionItem(
+                                trailingWidget: SvgPicture.asset(
+                                  'assets/icons/onedrive_logo.svg',
+                                  width: 40.0,
+                                ),
+                                title: 'Microsoft OneDrive',
+                                price: 29.99,
+                              ),
+                            ],
+                          ),
+                          ListView(
+                            shrinkWrap: true,
+                            padding: EdgeInsets.zero,
+                            children: const [
+                              SubscriptionItem(
+                                trailingWidget: SubscriptionItemDate(
+                                  day: 25,
+                                  month: 'Jun',
+                                ),
+                                title: 'Spotify',
+                                price: 5.99,
+                              ),
+                              SubscriptionItem(
+                                trailingWidget: SubscriptionItemDate(
+                                  day: 23,
+                                  month: 'Jun',
+                                ),
+                                title: 'YouTube Premium',
+                                price: 18.99,
+                              ),
+                              SubscriptionItem(
+                                trailingWidget: SubscriptionItemDate(
+                                  day: 18,
+                                  month: 'Jun',
+                                ),
+                                title: 'Microsoft OneDrive',
+                                price: 29.99,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
