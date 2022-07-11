@@ -4,6 +4,8 @@ import 'package:trackizer_app/config/colors.dart';
 import 'package:trackizer_app/screens/home/home_screen.dart';
 import 'dart:math' as math;
 
+import 'package:trackizer_app/screens/spending_budgets/spending_budgets_screen.dart';
+
 class Nav extends StatefulWidget {
   const Nav({Key? key}) : super(key: key);
 
@@ -16,7 +18,7 @@ class _NavState extends State<Nav> {
 
   final _pages = [
     const HomeScreen(),
-    Container(color: Colors.red),
+    const SpendingBudgetsScreen(),
     Container(color: Colors.blue),
     Container(color: Colors.green),
   ];
