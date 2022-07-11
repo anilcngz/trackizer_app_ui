@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:trackizer_app/config/colors.dart';
 import 'package:trackizer_app/screens/calendar/calendar_screen.dart';
+import 'package:trackizer_app/screens/credit_cards/credit_cards_screen.dart';
 import 'package:trackizer_app/screens/home/home_screen.dart';
 import 'dart:math' as math;
 
@@ -17,16 +18,17 @@ class Nav extends StatefulWidget {
 class _NavState extends State<Nav> {
   int _selectedIndex = 0;
 
-  final _pages = [
-    const HomeScreen(),
-    const SpendingBudgetsScreen(),
-    const CalendarScreen(),
-    Container(color: Colors.green),
+  final _pages = const [
+    HomeScreen(),
+    SpendingBudgetsScreen(),
+    CalendarScreen(),
+    CreditCardsScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: _selectedIndex == 3 ? true : false,
       body: IndexedStack(
         index: _selectedIndex,
         children: _pages,
