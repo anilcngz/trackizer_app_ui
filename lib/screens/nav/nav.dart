@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:trackizer_app/config/colors.dart';
+import 'package:trackizer_app/screens/calendar/calendar_screen.dart';
 import 'package:trackizer_app/screens/home/home_screen.dart';
 import 'dart:math' as math;
 
@@ -19,7 +20,7 @@ class _NavState extends State<Nav> {
   final _pages = [
     const HomeScreen(),
     const SpendingBudgetsScreen(),
-    Container(color: Colors.blue),
+    const CalendarScreen(),
     Container(color: Colors.green),
   ];
 
