@@ -5,6 +5,7 @@ import 'package:trackizer_app/config/colors.dart';
 import 'package:trackizer_app/screens/home/widgets/sub_item.dart';
 import 'package:trackizer_app/screens/home/widgets/subscription_item.dart';
 import 'package:trackizer_app/screens/home/widgets/subscription_item_date.dart';
+import 'package:trackizer_app/screens/subscription_info/subscription_info_screen.dart';
 import 'dart:math' as math;
 
 import 'package:trackizer_app/widgets/custom_button.dart';
@@ -194,6 +195,14 @@ class HomeScreen extends StatelessWidget {
                                 ),
                                 title: 'Spotify',
                                 price: 5.99,
+                                onTap: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    fullscreenDialog: true,
+                                    builder: (context) =>
+                                        const SubscriptionInfoScreen(),
+                                  ),
+                                ),
                               ),
                               SubscriptionItem(
                                 trailingWidget: SvgPicture.asset(

@@ -6,50 +6,55 @@ class SubscriptionItem extends StatelessWidget {
   final Widget trailingWidget;
   final String title;
   final double price;
+  final void Function()? onTap;
 
   const SubscriptionItem({
     Key? key,
     required this.trailingWidget,
     required this.title,
     required this.price,
+    this.onTap,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 64,
-      width: double.infinity,
-      margin: const EdgeInsets.only(bottom: 8.0),
-      padding: const EdgeInsets.symmetric(
-        horizontal: 12.0,
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16.0),
-        border: Border.all(
-          width: 1.0,
-          color: kGrey70,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        height: 64,
+        width: double.infinity,
+        margin: const EdgeInsets.only(bottom: 8.0),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 12.0,
         ),
-      ),
-      child: Row(
-        children: [
-          trailingWidget,
-          const SizedBox(width: 15.0),
-          Text(
-            title,
-            style: Theme.of(context)
-                .textTheme
-                .labelLarge!
-                .copyWith(fontWeight: FontWeight.w600),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16.0),
+          border: Border.all(
+            width: 1.0,
+            color: kGrey70,
           ),
-          const Spacer(),
-          Text(
-            '\$$price',
-            style: Theme.of(context)
-                .textTheme
-                .labelLarge!
-                .copyWith(fontWeight: FontWeight.w600),
-          ),
-        ],
+        ),
+        child: Row(
+          children: [
+            trailingWidget,
+            const SizedBox(width: 15.0),
+            Text(
+              title,
+              style: Theme.of(context)
+                  .textTheme
+                  .labelLarge!
+                  .copyWith(fontWeight: FontWeight.w600),
+            ),
+            const Spacer(),
+            Text(
+              '\$$price',
+              style: Theme.of(context)
+                  .textTheme
+                  .labelLarge!
+                  .copyWith(fontWeight: FontWeight.w600),
+            ),
+          ],
+        ),
       ),
     );
   }
