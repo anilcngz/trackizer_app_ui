@@ -1,16 +1,33 @@
-# trackizer_app
+# Trackizer App UI with Flutter
 
-A new Flutter project.
+Design Credit: [https://symu.co/freebies/templates-4/trackizer](https://symu.co/freebies/templates-4/trackizer/)
 
-## Getting Started
+## Screens
 
-This project is a starting point for a Flutter application.
+### Welcome Screen
+<img src="screens/welcome.png" width="250" alt="Welcome Screen">
 
-A few resources to get you started if this is your first Flutter project:
+### Auth Screens
+<img src="screens/auth1.png" width="250" alt="Get Started Screen">
+&nbsp;&nbsp;
+<img src="screens/auth2.png" width="250" alt="Register Screen">
+&nbsp;&nbsp;
+<img src="screens/auth3.png" width="250" alt="Login Screen">
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Other Screens
+<img src="screens/home1.png" width="250" alt="Home Screen with Tab 1">
+&nbsp;&nbsp;
+<img src="screens/home2.png" width="250" alt="Home Screen with Tab 2">
+&nbsp;&nbsp;
+<img src="screens/spending_budgets.png" width="250" alt="Spending & Budgets Screen">
+&nbsp;&nbsp;
+<img src="screens/calendar.png" width="250" alt="Calendar Screen">
+&nbsp;&nbsp;
+<img src="screens/credit_cards.png" width="250" alt="Credit Cards Screen">
+&nbsp;&nbsp;
+<img src="screens/new_subscription.png" width="250" alt="New Subscription Screen">
+&nbsp;&nbsp;
+<img src="screens/subscription_info.png" width="250" alt="Subscription Info Screen">
+&nbsp;&nbsp;
+<img src="screens/settings.png" width="250" alt="Settings Screen">
+&nbsp;&nbsp;
