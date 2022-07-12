@@ -5,6 +5,7 @@ import 'package:trackizer_app/config/colors.dart';
 import 'package:trackizer_app/screens/home/widgets/sub_item.dart';
 import 'package:trackizer_app/screens/home/widgets/subscription_item.dart';
 import 'package:trackizer_app/screens/home/widgets/subscription_item_date.dart';
+import 'package:trackizer_app/screens/settings/settings_screen.dart';
 import 'package:trackizer_app/screens/subscription_info/subscription_info_screen.dart';
 import 'dart:math' as math;
 
@@ -24,7 +25,11 @@ class HomeScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 25.0),
             child: GestureDetector(
-              onTap: () {},
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const SettingsScreen(),
+                ),
+              ),
               child: SvgPicture.asset('assets/icons/Settings.svg'),
             ),
           ),

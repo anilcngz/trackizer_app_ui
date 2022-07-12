@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:trackizer_app/config/colors.dart';
 import 'package:trackizer_app/widgets/custom_button.dart';
+import 'package:trackizer_app/widgets/info_container.dart';
 import 'package:trackizer_app/widgets/info_item.dart';
 
 class SubscriptionInfoScreen extends StatelessWidget {
@@ -105,45 +106,31 @@ class SubscriptionInfoScreen extends StatelessWidget {
                           ),
                           child: Column(
                             children: [
-                              Expanded(
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                    vertical: 16.0,
-                                    horizontal: 20.0,
-                                  ),
-                                  decoration: BoxDecoration(
-                                    color: kGrey60.withOpacity(0.20),
-                                    borderRadius: BorderRadius.circular(16.0),
-                                    border: Border.all(
-                                      width: 1.0,
-                                      color: const Color(0xFFCFCFFC)
-                                          .withOpacity(0.15),
+                              const Expanded(
+                                child: InfoContainer(
+                                  children: [
+                                    InfoItem(
+                                      title: 'Name',
+                                      value: 'Spotify',
                                     ),
-                                  ),
-                                  child: Column(
-                                    children: const [
-                                      InfoItem(
-                                        title: 'Name',
-                                        value: 'Spotify',
-                                      ),
-                                      InfoItem(
-                                        title: 'Description',
-                                        value: 'Music app',
-                                      ),
-                                      InfoItem(
-                                        title: 'Category',
-                                        value: 'Entertainment',
-                                      ),
-                                      InfoItem(
-                                        title: 'Reminder',
-                                        value: 'Never',
-                                      ),
-                                      InfoItem(
-                                        title: 'Currency',
-                                        value: 'USD (\$)',
-                                      ),
-                                    ],
-                                  ),
+                                    InfoItem(
+                                      title: 'Description',
+                                      value: 'Music app',
+                                    ),
+                                    InfoItem(
+                                      title: 'Category',
+                                      value: 'Entertainment',
+                                    ),
+                                    InfoItem(
+                                      title: 'Reminder',
+                                      value: 'Never',
+                                    ),
+                                    InfoItem(
+                                      title: 'Currency',
+                                      value: 'USD (\$)',
+                                      isLastItem: true,
+                                    ),
+                                  ],
                                 ),
                               ),
                               const SizedBox(height: 16.0),
