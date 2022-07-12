@@ -4,6 +4,7 @@ import 'package:trackizer_app/config/colors.dart';
 import 'package:trackizer_app/screens/calendar/calendar_screen.dart';
 import 'package:trackizer_app/screens/credit_cards/credit_cards_screen.dart';
 import 'package:trackizer_app/screens/home/home_screen.dart';
+import 'package:trackizer_app/screens/new_subscription/new_subscription_screen.dart';
 import 'dart:math' as math;
 
 import 'package:trackizer_app/screens/spending_budgets/spending_budgets_screen.dart';
@@ -35,7 +36,12 @@ class _NavState extends State<Nav> {
       ),
       bottomNavigationBar: _buildBottomNavigationBar(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const NewSubscriptionScreen(),
+          ),
+        ),
         backgroundColor: kAccentP100,
         child: SvgPicture.asset('assets/icons/Add.svg'),
       ),
